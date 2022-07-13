@@ -5,7 +5,7 @@
 <mapper namespace="com.misaka.mapper.UserMapper">
 
     <insert id="insertUser">
-        insert into t_user values(null, 'admin', '123456', 23, '男','12345@qq.com')
+        insert into t_user values(null, 'admin1', '123456', 23, '男','12345@qq.com')
     </insert>
 
 
