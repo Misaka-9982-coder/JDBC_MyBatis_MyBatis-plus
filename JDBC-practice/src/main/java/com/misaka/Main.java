@@ -11,7 +11,7 @@ public class Main {
 //        Class.forName("com.mysql.jdbc.Driver");
 
         // 2. Get the connection
-        String url = "jdbc:mysql://springbootdb";
+        String url = "jdbc:mysql://localhost:3306/springbootdb";
         String user = "root";
         String password = "123";
         Connection connection = DriverManager.getConnection(url, user, password);
