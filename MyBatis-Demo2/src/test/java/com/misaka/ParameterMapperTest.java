@@ -52,4 +52,12 @@ public class ParameterMapperTest {
         int result = mapper.insertUser(new User(null, "李四", "123", 23, "男", "123456@qq.com"));
         System.out.println(result);
     }
+
+    @Test
+    public void testCheckLoginByParam() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        ParameterMapper mapper = sqlSession.getMapper(ParameterMapper.class);
+        User user = mapper.checkLoginByParam("张三", "123456");
+        System.out.println(user);
+    }
 }

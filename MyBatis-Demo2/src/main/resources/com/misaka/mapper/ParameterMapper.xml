@@ -29,4 +29,8 @@
     <insert id="insertUser">
         insert into t_user values(null, #{username}, #{password}, #{age}, #{sex}, #{email})
     </insert>
+
+    <select id="checkLoginByParam" resultType="User">
+        select * from t_user where username = #{username} and password = #{password}
+    </select>
 </mapper>
