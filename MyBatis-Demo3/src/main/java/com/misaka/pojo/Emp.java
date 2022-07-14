@@ -8,15 +8,14 @@ public class Emp {
     private String sex;
     private String email;
 
-    public Emp() {
+    private Dept dept;
+
+    public Dept getDept() {
+        return dept;
     }
 
-    public Emp(Integer eid, String empName, Integer age, String sex, String email) {
-        this.eid = eid;
-        this.empName = empName;
-        this.age = age;
-        this.sex = sex;
-        this.email = email;
+    public void setDept(Dept dept) {
+        this.dept = dept;
     }
 
     public Integer getEid() {
@@ -67,6 +66,7 @@ public class Emp {
                 ", age=" + age +
                 ", sex='" + sex + '\'' +
                 ", email='" + email + '\'' +
+                ", dept=" + dept +
                 '}';
     }
 }

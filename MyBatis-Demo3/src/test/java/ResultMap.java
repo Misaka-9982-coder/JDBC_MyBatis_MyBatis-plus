@@ -16,4 +16,12 @@ public class ResultMap {
             System.out.println(emp);
         }
     }
+
+    @Test
+    public void testGetEmpAndDept() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        Emp empAndDeptById = mapper.getEmpAndDeptById(1);
+        System.out.println(empAndDeptById);
+    }
 }
