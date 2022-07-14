@@ -30,6 +30,8 @@ public class ResultMap {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
         Emp empAndDeptById = mapper.getEmpAndDeptByStepOne(1);
-        System.out.println(empAndDeptById);
+        System.out.println(empAndDeptById.getEmpName());
+        System.out.println("==============================");
+        System.out.println(empAndDeptById.getDept().getDeptName());
     }
 }

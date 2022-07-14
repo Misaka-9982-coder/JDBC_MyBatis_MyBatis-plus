@@ -59,7 +59,8 @@
         <result property="email" column="email"/>
         <association property="dept"
                     select="com.misaka.mapper.DeptMapper.getEmpAndDeptByStepTwo"
-                     column="did"></association>
+                     column="did"
+                    fetchType="lazy"></association>
     </resultMap>
     
     <select id="getEmpAndDeptByStepOne" resultMap="empAndDeptByStepResultMap">
