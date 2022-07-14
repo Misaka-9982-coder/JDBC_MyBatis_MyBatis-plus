@@ -37,5 +37,14 @@ public class SQLMapperTest {
             System.out.println(user);
         }
     }
+
+    @Test
+    public void testInsertUser() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        SQLMapper mapper = sqlSession.getMapper(SQLMapper.class);
+        User user = new User(null, "王武", "1223", 23, "女", "123@qq.com");
+        mapper.insertUser(user);
+        System.out.println(user);
+    }
 }
 

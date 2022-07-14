@@ -18,4 +18,8 @@
     <select id="getUserByTableName" resultType="User">
         select * from ${tableName}
     </select>
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        insert into t_user values(null, #{username}, #{password}, #{age}, #{sex}, #{email})
+    </insert>
 </mapper>
