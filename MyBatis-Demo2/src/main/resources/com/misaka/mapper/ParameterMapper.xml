@@ -21,4 +21,8 @@
 <!--        select * from t_user where username = #{arg0} and password = #{param2}-->
     </select>
 
+
+    <select id="checkLoginByMap" resultType="User">
+        select * from t_user where username = #{username} and password = #{password}
+    </select>
 </mapper>

@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Map;
 
 public class ParameterMapperTest {
 
@@ -33,6 +34,14 @@ public class ParameterMapperTest {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         ParameterMapper mapper = sqlSession.getMapper(ParameterMapper.class);
         User user = mapper.checkLogin("张三", "123456");
+        System.out.println(user);
+    }
+
+    @Test
+    public void testCheckLoginByMap() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        ParameterMapper mapper = sqlSession.getMapper(ParameterMapper.class);
+        User user = mapper.checkLoginByMap(Map.of("username", "张三", "password", "123456"));
         System.out.println(user);
     }
 }
