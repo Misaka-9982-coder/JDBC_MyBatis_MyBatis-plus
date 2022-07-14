@@ -9,4 +9,10 @@
         select * from t_user
     </select>
 
+    <select id="getUserByUsername" resultType="User">
+
+        select * from t_user where username = #{username}
+        <!-- select * from t_user where username = '${username}' -->
+    </select>
+
 </mapper>
