@@ -29,4 +29,13 @@ public class SelectMapperTest {
         }
         sqlSession.close();
     }
+
+    @Test
+    public void testGetCount() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        SelectMapper mapper = sqlSession.getMapper(SelectMapper.class);
+        Integer count = mapper.getCount();
+        System.out.println(count);
+        sqlSession.close();
+    }
 }

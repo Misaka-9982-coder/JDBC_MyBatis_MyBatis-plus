@@ -13,4 +13,8 @@
     <select id="getAllUser" resultType="User">
         select * from t_user
     </select>
+
+    <select id="getCount" resultType="Integer">
+        select count(*) from t_user
+    </select>
 </mapper>
