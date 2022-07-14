@@ -10,4 +10,6 @@ public interface SQLMapper {
     List<User> getUserByLike(@Param("username") String username);
 
     int deleteMore(@Param("ids") String ids);
+
+    List<User> getUserByTableName(@Param("tableName") String tableName);
 }
