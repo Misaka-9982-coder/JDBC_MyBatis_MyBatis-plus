@@ -10,4 +10,8 @@
         <!-- select * from t_user where username like concat('%', #{username}, '%') -->
         select * from t_user where username like "%"#{username}"%"
     </select>
+
+    <delete id="deleteMore">
+        delete from t_user where id in (${ids})
+    </delete>
 </mapper>

@@ -8,4 +8,6 @@ import java.util.List;
 public interface SQLMapper {
 
     List<User> getUserByLike(@Param("username") String username);
+
+    int deleteMore(@Param("ids") String ids);
 }

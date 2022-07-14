@@ -19,5 +19,13 @@ public class SQLMapperTest {
             System.out.println(user);
         }
     }
+
+    @Test
+    public void testDeleteMore() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        SQLMapper mapper = sqlSession.getMapper(SQLMapper.class);
+        int res = mapper.deleteMore("1, 2, 3");
+        System.out.println(res);
+    }
 }
 
