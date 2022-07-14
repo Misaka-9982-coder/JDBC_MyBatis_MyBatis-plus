@@ -6,9 +6,9 @@
 
     <properties resource="jdbc.properties"/>
 
-    <settings>
-        <setting name="mapUnderscoreToCamelCase" value="true"/>
-    </settings>
+<!--    <settings>-->
+<!--        <setting name="mapUnderscoreToCamelCase" value="true"/>-->
+<!--    </settings>-->
 
     <typeAliases>
         <package name="com.misaka.pojo"/>
