@@ -27,4 +27,12 @@ public class ParameterMapperTest {
         User user = mapper.getUserByUsername("张三");
         System.out.println(user);
     }
+
+    @Test
+    public void testCheckLogin() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        ParameterMapper mapper = sqlSession.getMapper(ParameterMapper.class);
+        User user = mapper.checkLogin("张三", "123456");
+        System.out.println(user);
+    }
 }

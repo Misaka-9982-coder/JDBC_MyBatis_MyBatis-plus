@@ -8,4 +8,6 @@ public interface ParameterMapper {
     List<User> getAllUser();
 
     User getUserByUsername(String username);
+
+    User checkLogin(String username, String password);
 }
