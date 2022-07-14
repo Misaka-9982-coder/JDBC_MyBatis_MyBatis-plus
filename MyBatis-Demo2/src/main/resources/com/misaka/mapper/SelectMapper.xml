@@ -17,4 +17,8 @@
     <select id="getCount" resultType="Integer">
         select count(*) from t_user
     </select>
+
+    <select id="getUserByIdMap" resultType="map">
+        select * from t_user where id = #{id}
+    </select>
 </mapper>
