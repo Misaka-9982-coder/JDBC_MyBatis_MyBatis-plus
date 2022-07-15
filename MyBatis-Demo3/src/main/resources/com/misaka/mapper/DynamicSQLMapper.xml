@@ -39,4 +39,23 @@
             </if>
         </where>
     </select>
+
+
+    <select id="getEmpByConditionIfThree" resultType="Emp">
+        select * from t_emp
+        <trim prefix="where" suffixOverrides="and|or">
+            <if test="empName != null and empName != ''">
+                emp_name = #{empName} and
+            </if>
+            <if test="age != null and age != ''">
+                age = #{age} or
+            </if>
+            <if test="sex != null and sex != ''">
+                sex = #{sex} and
+            </if>
+            <if test="email != null and email != ''">
+                email = #{email} or
+            </if>
+        </trim>
+    </select>
 </mapper>

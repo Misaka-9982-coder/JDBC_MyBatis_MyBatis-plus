@@ -34,4 +34,17 @@ public class DynamicSQLMapperTest {
             System.out.println(emp1);
         }
     }
+
+    @Test
+    public void testGetEmpByConditionIfThree() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        Emp emp = new Emp();
+//        emp.setEmpName("张三");
+//        emp.setAge(23);
+        List<Emp> emps = mapper.getEmpByConditionIfTwo(emp);
+        for (Emp emp1 : emps) {
+            System.out.println(emp1);
+        }
+    }
 }

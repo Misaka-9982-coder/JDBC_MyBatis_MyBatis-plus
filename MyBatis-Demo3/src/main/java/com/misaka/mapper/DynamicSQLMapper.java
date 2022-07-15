@@ -9,4 +9,6 @@ public interface DynamicSQLMapper {
     List<Emp> getEmpByConditionIfOne(Emp emp);
 
     List<Emp> getEmpByConditionIfTwo(Emp emp);
+
+    List<Emp> getEmpByConditionIfThree(Emp emp);
 }
