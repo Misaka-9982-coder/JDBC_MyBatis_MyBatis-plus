@@ -47,4 +47,33 @@ public class DynamicSQLMapperTest {
             System.out.println(emp1);
         }
     }
+
+    @Test
+    public void testGetEmpByChoose() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        Emp emp = new Emp();
+        emp.setAge(23);
+        List<Emp> emps = mapper.getEmpByChoose(emp);
+        for (Emp emp1 : emps) {
+            System.out.println(emp1);
+        }
+
+        System.out.println("==============================");
+
+        Emp emp2 = new Emp();
+        emp2.setEmpName("张三");
+        List<Emp> emps2 = mapper.getEmpByChoose(emp2);
+        for (Emp emp1 : emps2) {
+            System.out.println(emp1);
+        }
+
+        System.out.println("==============================");
+
+        Emp emp3 = new Emp();
+        List<Emp> emps3 = mapper.getEmpByChoose(emp3);
+        for (Emp emp1 : emps3) {
+            System.out.println(emp1);
+        }
+    }
 }
