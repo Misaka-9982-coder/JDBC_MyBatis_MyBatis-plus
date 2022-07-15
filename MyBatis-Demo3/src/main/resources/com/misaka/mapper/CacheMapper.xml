@@ -5,6 +5,8 @@
 
 <mapper namespace="com.misaka.mapper.CacheMapper">
 
+    <cache/>
+
     <select id="getEmpById" resultType="Emp">
         select * from t_emp where eid = #{eid}
     </select>
