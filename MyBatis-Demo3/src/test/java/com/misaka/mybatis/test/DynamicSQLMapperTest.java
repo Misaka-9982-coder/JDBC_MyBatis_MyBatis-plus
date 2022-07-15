@@ -17,7 +17,19 @@ public class DynamicSQLMapperTest {
         DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
         Emp emp = new Emp();
         emp.setEmpName("张三");
-        List<Emp> emps = mapper.getEmpByConditionIf(emp);
+        List<Emp> emps = mapper.getEmpByConditionIfOne(emp);
+        for (Emp emp1 : emps) {
+            System.out.println(emp1);
+        }
+    }
+
+    @Test
+    public void testGetEmpByConditionIfTwo() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        Emp emp = new Emp();
+        emp.setEmpName("张三");
+        List<Emp> emps = mapper.getEmpByConditionIfTwo(emp);
         for (Emp emp1 : emps) {
             System.out.println(emp1);
         }

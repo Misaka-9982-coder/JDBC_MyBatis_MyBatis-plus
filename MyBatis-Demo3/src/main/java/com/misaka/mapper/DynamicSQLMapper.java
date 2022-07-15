@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface DynamicSQLMapper {
 
-    List<Emp> getEmpByConditionIf(Emp emp);
+    List<Emp> getEmpByConditionIfOne(Emp emp);
+
+    List<Emp> getEmpByConditionIfTwo(Emp emp);
 }
