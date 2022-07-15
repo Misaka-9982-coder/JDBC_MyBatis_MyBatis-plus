@@ -26,11 +26,15 @@ public class MBGTest {
             // 查询所有员工
 //            List<Emp> list = mapper.selectByExample(null);
 //            list.forEach(emp -> System.out.println(emp));
-            EmpExample example = new EmpExample();
-            example.createCriteria().andEmpNameEqualTo("张三").andAgeGreaterThan(20);
-            example.or().andDidIsNull();
-            List<Emp> list = mapper.selectByExample(example);
-            list.forEach(emp -> System.out.println(emp));
+//            EmpExample example = new EmpExample();
+//            example.createCriteria().andEmpNameEqualTo("张三").andAgeGreaterThan(20);
+//            example.or().andDidIsNull();
+//            List<Emp> list = mapper.selectByExample(example);
+//            list.forEach(emp -> System.out.println(emp));
+
+            mapper.updateByPrimaryKey(new Emp(1, "张三", 20, "女", "张三@qq.com"));
+            mapper.updateByPrimaryKeySelective(new Emp(1, "张三", 20, null, "张三@qq.com"));
+
         } catch (Exception e) {
             e.printStackTrace();
         }
