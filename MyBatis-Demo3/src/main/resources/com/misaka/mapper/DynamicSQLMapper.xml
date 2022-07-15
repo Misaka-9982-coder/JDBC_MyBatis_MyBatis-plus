@@ -95,4 +95,11 @@
             eid = #{eid}
         </foreach>
     </delete>
+
+    <insert id="insertMoreByList">
+        insert into t_emp values
+        <foreach collection="emps" item="emp" separator=",">
+            (null, #{emp.empName}, #{emp.age}, #{emp.sex}, #{emp.email}, null)
+        </foreach>
+    </insert>
 </mapper>
