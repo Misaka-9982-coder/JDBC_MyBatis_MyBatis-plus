@@ -7,7 +7,7 @@
     <properties resource="jdbc.properties"/>
 
     <typeAliases>
-        <package name=""/>
+        <package name="com.misaka.pojo"/>
     </typeAliases>
 
     <environments default="development">
@@ -23,6 +23,6 @@
     </environments>
 
     <mappers>
-        <package name=""/>
+        <package name="com.misaka.mapper"/>
     </mappers>
 </configuration>
