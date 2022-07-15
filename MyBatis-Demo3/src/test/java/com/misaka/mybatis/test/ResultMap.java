@@ -1,3 +1,5 @@
+package com.misaka.mybatis.test;
+
 import com.misaka.mapper.DeptMapper;
 import com.misaka.mapper.EmpMapper;
 import com.misaka.pojo.Dept;
