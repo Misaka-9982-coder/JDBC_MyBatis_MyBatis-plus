@@ -81,4 +81,18 @@
             </choose>
         </where>
     </select>
+
+    <delete id="deleteMoreByArray1">
+        delete from t_emp where eid in
+        <foreach collection="eids" item="eid" separator="," open="(" close=")">
+            #{eid}
+        </foreach>
+    </delete>
+
+    <delete id="deleteMoreByArray2">
+        delete from t_emp where
+        <foreach collection="eids" item="eid" separator="or">
+            eid = #{eid}
+        </foreach>
+    </delete>
 </mapper>

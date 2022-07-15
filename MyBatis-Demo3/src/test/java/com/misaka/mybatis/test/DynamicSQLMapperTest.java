@@ -76,4 +76,20 @@ public class DynamicSQLMapperTest {
             System.out.println(emp1);
         }
     }
+
+    @Test
+    public void testDeleteMoreByArray1() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        int count = mapper.deleteMoreByArray1(new Integer[]{6, 7, 8});
+        System.out.println(count);
+    }
+
+    @Test
+    public void testDeleteMoreByArray2() {
+        SqlSession sqlSession = SqlSessionUtils.getSqlSession();
+        DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
+        int count = mapper.deleteMoreByArray2(new Integer[]{6, 7, 8});
+        System.out.println(count);
+    }
 }
