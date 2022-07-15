@@ -5,9 +5,10 @@
 
 <mapper namespace="com.misaka.mapper.DynamicSQLMapper">
 
+    <sql id="empColumns">eid, emp_name, age, sex, email</sql>
     
     <select id="getEmpByConditionIfOne" resultType="Emp">
-        select * from t_emp where 1 = 1
+        select <include refid="empColumns"></include> from t_emp where 1 = 1
         <if test="empName != null and empName != ''">
             and emp_name = #{empName}
         </if>
