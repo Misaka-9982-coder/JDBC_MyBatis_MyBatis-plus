@@ -8,7 +8,6 @@ import lombok.*;
 //@ToString
 
 @Data
-@AllArgsConstructor
 public class User {
 
     private Long id;
