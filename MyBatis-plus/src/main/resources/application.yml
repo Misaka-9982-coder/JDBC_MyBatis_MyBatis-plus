@@ -5,3 +5,7 @@ spring:
     url: jdbc:mysql://localhost:3306/springbootdb?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 123
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
